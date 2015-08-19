@@ -1,7 +1,5 @@
 # Ansible Role: Varnish
 
-[![Build Status](https://travis-ci.org/geerlingguy/ansible-role-varnish.svg?branch=master)](https://travis-ci.org/geerlingguy/ansible-role-varnish)
-
 An Ansible Role that installs Varnish on RedHat/CentOS or Debian/Ubuntu Linux.
 
 ## Requirements
@@ -56,7 +54,7 @@ None.
       vars_files:
         - vars/main.yml
       roles:
-        - { role: geerlingguy.varnish }
+        - { role: msherron.varnish-debian-lucid }
 
 *Inside `vars/main.yml`*:
 
@@ -70,4 +68,4 @@ MIT / BSD
 
 ## Author Information
 
-This role was created in 2014 by [Jeff Geerling](http://jeffgeerling.com/), author of [Ansible for DevOps](http://ansiblefordevops.com/).
+This is a fork of a role that was created in 2014 by [Jeff Geerling](http://jeffgeerling.com/), author of [Ansible for DevOps](http://ansiblefordevops.com/).

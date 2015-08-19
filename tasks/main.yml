@@ -3,6 +3,9 @@
   when: ansible_os_family == 'RedHat'
 
 - include: setup-Debian.yml
+  vars:
+    release_name: "{{ (debian_lucid_flag) | ternary('lucid', ansible_distribution_release) }}"
+    varnish_version: "{{ (debian_lucid_flag) | ternary('varnish-3.0','varnish-4.0') }}"
   when: ansible_os_family == 'Debian'
 
 - name: Ensure Varnish config path exists.
